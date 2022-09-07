@@ -1,0 +1,144 @@
+@import 'styles/variables.scss';
+@import 'styles/media.scss';
+
+.pin-code-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 30px;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  background: #0c0c0c;
+
+  @include mediaMinMax(1025, $normal) {
+    padding: 0 1.563vw;
+    padding-top: 80px;
+    padding-bottom: 2.604vw;
+  }
+
+  @include media($xlmini) {
+    padding: 0 20px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  &__content {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    @include mediaMinMax(1025, $normal) {
+      width: 66.667vw;
+    }
+
+    @include media($small) {
+      flex-direction: column;
+      width: fit-content;
+    }
+  }
+
+  &__buttons-block {
+    display: grid;
+    grid-template-columns: 75px 75px 60px;
+  }
+
+  &__item-btn {
+    height: 60px;
+    background: #303030;
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-child(3n + 3) {
+      margin-right: 0;
+    }
+
+    &_no-visible {
+      opacity: 0;
+    }
+  }
+
+  &__submit-btn {
+    margin-top: 20px;
+    background-color: blanchedalmond;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  &__pin-code-block {
+    margin: 0 auto;
+  }
+
+  &__input {
+    width: fit-content;
+    max-width: 210px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+    border: none;
+  }
+
+  &__input-block {
+    display: flex;
+    width: auto;
+    justify-content: center;
+  }
+
+  &__input-item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_fill {
+      background-color: white;
+    }
+  }
+
+  &__empty-item {
+    width: 10px;
+    height: 10px;
+    color: white;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__error-block {
+    width: 100%;
+    height: 40px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item-btn-number {
+    font-size: 18px;
+  }
+
+  &__item-btn-text {
+    font-size: 10px;
+  }
+}

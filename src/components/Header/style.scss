@@ -1,0 +1,25 @@
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 60px;
+  top: 0;
+  left: 0;
+  padding: 10px 30px;
+  background: #1b1c1d;
+  color: hsla(0, 0%, 100%, .9);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+
+  &__favicon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 15px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+}
