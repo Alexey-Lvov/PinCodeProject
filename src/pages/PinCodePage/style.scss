@@ -8,6 +8,8 @@
   padding-top: 80px;
   padding-bottom: 50px;
   background: #0c0c0c;
+  align-items: center;
+  display: flex;
 
   @include mediaMinMax(1025, $normal) {
     padding: 0 1.563vw;
